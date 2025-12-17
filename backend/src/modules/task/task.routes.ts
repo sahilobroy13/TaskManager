@@ -11,5 +11,6 @@ router.post("/", controller.createTask);
 router.get("/", controller.getMyTask);
 router.patch("/:id", controller.update);
 router.delete("/:id", controller.delete);
+router.get("/dashboard", authMiddleware,controller.dashboard);
 
 export default router;
